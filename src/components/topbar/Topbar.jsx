@@ -1,6 +1,6 @@
 import "./topbar.css";
 import { Search, Person, Chat, Notifications } from "@material-ui/icons";
-
+import { Link } from "react-router-dom";
 export default function Topbar() {
   return (
     <div className="topbarContainer">
@@ -18,8 +18,12 @@ export default function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
-          <span className="topbarLink">Homepage</span>
+          <Link to="/" style={{ textDecoration: "none",color:"white" }}>
+            <span className="topbarLink">Homepage</span>
+          </Link>
+          <Link to="/" style={{ textDecoration: "none",color:"white" }}>
           <span className="topbarLink">Timeline</span>
+          </Link>
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
@@ -35,7 +39,7 @@ export default function Topbar() {
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
-        <img src="/assets/person/1.jpeg" alt="" className="topbarImg"/>
+        <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
       </div>
     </div>
   );
